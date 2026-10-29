@@ -1,0 +1,26 @@
+<!--
+  pagina-entrar.html — el marcado de <PaginaEntrar>. Se pega dentro del return.
+  Al convertirlo a JSX (Paso 3 de la Práctica 16):
+    1. class → className, <input ...> → <input ... />.
+    2. <form> lleva onSubmit={enviar}.
+    3. Cada <input> lleva value={…} y onChange={(e) => set…(e.target.value)}: formulario CONTROLADO.
+    4. El aviso de error sólo se pinta si hay error: {error && <p …>{error}</p>}.
+    5. <a href="/registro"> → <Link to="/registro">.
+-->
+<form class="formulario">
+  <h1>Entrar</h1>
+  <p class="aviso aviso--error">Credenciales inválidas</p>
+
+  <label class="campo">
+    <span class="campo__etiqueta">Correo</span>
+    <input class="campo__control" type="email">
+  </label>
+
+  <label class="campo">
+    <span class="campo__etiqueta">Contraseña</span>
+    <input class="campo__control" type="password">
+  </label>
+
+  <button class="boton boton--ancho" type="submit">Entrar</button>
+  <p class="formulario__pie">¿No tienes cuenta? <a href="/registro">Regístrate</a></p>
+</form>

@@ -1,0 +1,22 @@
+<!--
+  pagina-mis-inscripciones.html — el marcado de <PaginaMisInscripciones>.
+  Al convertirlo a JSX (Paso 4 de la Práctica 17):
+    1. class → className y <img ... />.
+    2. Deja UNA inscripción y repítela con inscripciones.map(...), key={i.id}.
+    3. El nombre de la clase es un enlace: <a href> → <Link to={`/clases/${i.clase.id}`}>.
+    4. El texto de la bajada cambia si la lista está vacía.
+-->
+<section class="pagina__encabezado">
+  <h1>Mis inscripciones</h1>
+  <p class="pagina__bajada">1 clase(s) esta semana.</p>
+</section>
+
+<ul class="inscripciones">
+  <li class="inscripcion">
+    <img class="inscripcion__imagen" src="http://localhost:3000/img/clase-03.jpg" alt="">
+    <div>
+      <a href="/clases/3" class="inscripcion__clase">Yoga y movilidad</a>
+      <div class="inscripcion__meta">lunes · 19:00 · Marisol Peña</div>
+    </div>
+  </li>
+</ul>
